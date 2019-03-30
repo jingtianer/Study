@@ -1,4 +1,4 @@
-# Cusor那点事  
+# Cursor那点事  
 今天写一个登陆界面，到最后判断账号密码的时候，看了一些别人的源码，用到了下面的代码：
 ```
 public boolean isRight(String edit_account, String edit_password){
@@ -12,7 +12,7 @@ public boolean isRight(String edit_account, String edit_password){
         return false;
     }
 ```
-*emmm~ Cusor 王德发！！！！！这是啥 ?*  
+*emmm~ Cursor 王德发！！！！！这是啥 ?*  
 上网搜索了一下，cusor是英语‘光标’的意思  
 
 ---
@@ -104,7 +104,7 @@ for(cur.moveToFirst();!cur.isAfterLast();cur.moveToNext())
 }
 ```
 ---
-## Cusor解析
+## Cursor解析
 一般情况下：  
 ```
 SQLiteDataBase  
@@ -113,7 +113,10 @@ Cursor
  cursor = db.query(各种参数);  
  ```
 这时，就出现了网上的解释了，说cursor是每行的集合。  
-现在先解释一下SQLite数据库中是怎么存放数据的，是以表的形式存放的，看这个表Student
+现在先解释一下SQLite数据库中是怎么存放数据的，是以表的形式存放的，看这个表Student  
+
+
+
 position | id | name | gender | age | city  
 |--|--|---|--|--|--|
 0 |1 |张三| 男|19|山东  
@@ -128,7 +131,10 @@ position | id | name | gender | age | city
 ### 遍历cursor内容的时候，为什么要先moveToFirst()？
 我们不进行moveToFirst()操作，我们获取游标对象后，直接输出它当前的position值  
 ![](https://img-blog.csdn.net/20161201150546871?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center)  
-可以看到，输出的值是-1。
+可以看到，输出的值是-1。   
+
+
+
 position | id | name | gender | age | city  
 |--|--|---|--|--|--|
 -1 |null|null|null|null|null
