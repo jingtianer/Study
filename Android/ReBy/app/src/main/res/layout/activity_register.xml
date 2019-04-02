@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="#EEF5FB"
+    android:orientation="vertical">
+    <ImageView
+        android:layout_width="@dimen/width_s46"
+        android:layout_height="@dimen/height_s50"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/margin_s12"
+        android:src="@drawable/ic_login_logo" />
+    <TextView
+        android:id="@+id/tv_login_sentence_under_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_under_logo"
+        android:textSize="@dimen/size_s3"
+        android:layout_gravity="center"/>
+    <LinearLayout
+        android:layout_marginTop="@dimen/margin_s13"
+        android:layout_width="@dimen/width_s80"
+        android:layout_height="@dimen/height_s15"
+        android:layout_gravity="center"
+        >
+
+        <ImageView
+            android:layout_width="@dimen/width_s9"
+            android:layout_height="@dimen/height_s12"
+            android:src="@drawable/ic_login_user" />
+        <EditText
+            android:id="@+id/et_register_account"
+            android:theme="@style/MyEditText"
+            android:layout_gravity="center"
+            android:layout_width="@dimen/width_s80"
+            android:layout_height="wrap_content"
+            android:hint="@string/text_account"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="320dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center">
+        <ImageView
+            android:layout_width="36dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ic_login_locker"/>
+        <EditText
+            android:id="@+id/et_register_password"
+            android:theme="@style/MyEditText"
+            android:layout_width="@dimen/width_s80"
+            android:layout_height="wrap_content"
+            android:hint="@string/text_password"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="@dimen/width_s80"
+        android:layout_height="@dimen/height_s15"
+        android:layout_gravity="center">
+        <ImageView
+            android:layout_width="@dimen/width_s9"
+            android:layout_height="@dimen/height_s12"
+            android:src="@drawable/ic_login_locker"/>
+        <EditText
+            android:id="@+id/et_re_register_password"
+            android:theme="@style/MyEditText"
+            android:layout_width="@dimen/width_s80"
+            android:layout_height="wrap_content"
+            android:hint="@string/text_re_password"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/btn_register_cancel"
+            android:layout_width="@dimen/width_s40"
+            android:layout_height="@dimen/height_s16"
+            android:background="@drawable/button_shape"
+            android:text="@string/text_cancel"
+            android:textSize="@dimen/size_s5"/>
+        <Button
+            android:id="@+id/btn_register_commit"
+            android:layout_width="160dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/margin_s5"
+            android:background="#FFC125"
+            android:text="@string/text_register"
+            android:textSize="@dimen/size_s5"/>
+    </LinearLayout>
+
+
+</LinearLayout>

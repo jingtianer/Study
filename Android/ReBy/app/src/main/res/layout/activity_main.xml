@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <FrameLayout
+        android:id="@+id/main_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+    </FrameLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="68dp">
+        <RadioGroup
+            android:id="@+id/main_radio_group"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:background="#EDEDED">
+
+            <RadioButton
+                android:id="@+id/bottom_radio_button_home"
+                style="@style/radiobutton_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableTop="@drawable/bottom_radio_button_home_selector"
+                android:text="首页" />
+            <RadioButton
+                android:id="@+id/bottom_radio_button_sale"
+                style="@style/radiobutton_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableTop="@drawable/bottom_radio_button_sale_selector"
+                android:text="拍卖" />
+            <RadioButton
+                android:id="@+id/bottom_radio_button_message"
+                style="@style/radiobutton_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableTop="@drawable/bottom_radio_button_message_selector"
+                android:text="消息" />
+            <RadioButton
+                android:id="@+id/bottom_radio_button_user"
+                style="@style/radiobutton_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableTop="@drawable/bottom_radio_button_user_selector"
+                android:text="用户" />
+        </RadioGroup>
+    </LinearLayout>
+
+
+</LinearLayout>

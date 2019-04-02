@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="#EEF5FB"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/login_logo"
+        android:layout_width="184dp"
+        android:layout_height="@dimen/height_s50"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/margin_s12"
+        android:src="@drawable/ic_login_logo" />
+    <TextView
+        android:id="@+id/tv_login_sentence_under_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_under_logo"
+        android:textSize="@dimen/size_s3"
+        android:layout_gravity="center"/>
+    <LinearLayout
+        android:layout_marginTop="50dp"
+        android:layout_width="@dimen/width_s80"
+        android:layout_height="@dimen/height_s15"
+        android:layout_gravity="center"
+        >
+
+        <ImageView
+            android:id="@+id/login_user"
+            android:layout_width="@dimen/width_s9"
+            android:layout_height="@dimen/height_s12"
+            android:src="@drawable/ic_login_user" />
+
+
+        <EditText
+            android:id="@+id/et_login_account"
+            android:lines="1"
+            android:imeOptions="actionNext"
+            android:inputType="text"
+            android:theme="@style/MyEditText"
+            android:layout_gravity="center"
+            android:layout_width="@dimen/height_s80"
+            android:layout_height="wrap_content"
+            android:hint="@string/text_account"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="@dimen/width_s80"
+        android:layout_height="@dimen/height_s15"
+        android:layout_gravity="center">
+        <ImageView
+            android:layout_width="@dimen/width_s9"
+            android:layout_height="@dimen/height_s12"
+            android:src="@drawable/ic_login_locker"/>
+        <EditText
+            android:id="@+id/et_login_password"
+            android:theme="@style/MyEditText"
+            android:imeOptions="actionDone"
+            android:layout_width="@dimen/width_s80"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:lines="1"
+            android:hint="@string/text_password"/>
+
+    </LinearLayout>
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="@dimen/width_s75"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="#FFD700"
+        android:layout_marginTop="@dimen/margin_s3"
+        android:text="@string/text_login"
+        android:textColor="#FFFFFF"
+        android:textSize="@dimen/size_s6"
+        />
+    <Button
+        android:id="@+id/btn_sign_up"
+        android:layout_width="@dimen/width_s75"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/margin_s3"
+        android:background="@drawable/button_shape"
+        android:text="@string/text_sign_up"
+        android:textSize="@dimen/size_s6"
+        >
+
+    </Button>
+
+</LinearLayout>
