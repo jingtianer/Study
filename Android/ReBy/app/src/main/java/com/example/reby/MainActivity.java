@@ -32,14 +32,7 @@ public class MainActivity extends FragmentActivity implements RadioGroup.OnCheck
                     WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
         }
         setContentView(R.layout.activity_main);
-         /*radio_btn_home = findViewById(R.id.bottom_radio_button_home);
-        radio_btn_sale = findViewById(R.id.bottom_radio_button_sale);
-        radio_btn_message = findViewById(R.id.bottom_radio_button_message);
-        radio_btn_user = findViewById(R.id.bottom_radio_button_user);
-       radio_btn_home.setOnClickListener(this);
-        radio_btn_sale.setOnClickListener(this);
-        radio_btn_message.setOnClickListener(this);
-        radio_btn_user.setOnClickListener(this);*/
+
          fragments = getFragments();//把获取的碎片添加到fragments里
          initView();
          mRadioGroup.setOnCheckedChangeListener(this);
