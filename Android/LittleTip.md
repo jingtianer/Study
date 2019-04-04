@@ -28,7 +28,22 @@ String s1 = s.trim();
     </solid>
 
 </shape>
+```  
+然后在布局文件中加入
 ```
+<Button
+        android:id="@+id/btn_sign_up"
+        android:layout_width="@dimen/width_s75"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/margin_s3"
+        android:background="@drawable/button_shape"
+        android:text="@string/text_sign_up"
+        android:textSize="@dimen/size_s6"
+        >
+``` 
+直接引用这个文件。 
+
 参考的文章 [Android Button设置圆角和边框和渐变](https://blog.csdn.net/yh18668197127/article/details/84848018
 )
 # 设置Edittext的输入限制  
@@ -115,4 +130,16 @@ edit_password.setTransformationMethod(PasswordTransformationMethod.getInstance()
 ```
 # 删除远程仓库的文件夹
 [这个就直接看教程，看这里](https://blog.csdn.net/smss007/article/details/80974219
-)
+)  
+
+---  
+# 在按钮之间画一条直线  
+
+很简单，直接在按钮之间写
+```
+ <View
+        android:background="@color/colorAccent"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+```
+然后就有线了。
