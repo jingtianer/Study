@@ -42,6 +42,9 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                     WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
         }
         setContentView(R.layout.activity_login);
+
+
+
         ActionBar actionBar = getSupportActionBar();
         if(actionBar != null){
             actionBar.hide();

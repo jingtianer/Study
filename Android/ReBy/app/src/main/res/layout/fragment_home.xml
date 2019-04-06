@@ -1,24 +1,216 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".HomeFragment">
+    android:orientation="vertical">
 
-    <!-- TODO: Update blank fragment layout -->
-    <android.support.v4.view.ViewPager
-        android:id="@+id/viewpager"
+    <android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="200dp">
-    </android.support.v4.view.ViewPager>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_height="match_parent">
 
-</FrameLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/viewpager"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_s40">
+            </android.support.v4.view.ViewPager>
+            <View
+                android:background="@color/orange"
+                android:layout_width="match_parent"
+                android:layout_height="2dp" />
+
+            <LinearLayout
+                android:background="@color/orange"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <Button
+                    android:background="#FFFFFF"
+                    android:drawableLeft="@drawable/ic_look_around"
+                    android:layout_gravity="center"
+                    android:layout_width="match_parent"
+                    android:text="@string/text_fragment_btn_look_around"
+                    android:textSize="@dimen/size_s5"
+                    android:layout_height="@dimen/height_s15"
+                    android:layout_weight="1"/>
+
+                <View
+                    android:background="@color/orange"
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent" />
+                <Button
+                    android:background="#FFFFFF"
+                    android:drawableLeft="@drawable/ic_on_sale"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/height_s15"
+                    android:text="@string/text_fragment_btn_on_sale"
+                    android:textSize="@dimen/size_s5"
+                    android:layout_weight="1"/>
+            </LinearLayout>
+            <View
+                android:background="@color/orange"
+                android:layout_width="match_parent"
+                android:layout_height="2dp" />
+
+            <LinearLayout
+                android:background="@color/grey"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_s50"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:background="@color/white"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_announce"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="精彩活动"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:background="@color/white"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/height_s44">
+
+                    <FrameLayout
+                        android:layout_width="@dimen/width_s40"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:layout_gravity="center"
+                            android:layout_width="@dimen/width_s50"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:src="@drawable/ic_moon" />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/height_s16"
+                            android:layout_gravity="bottom"
+                            android:background="#80000000"
+                            android:orientation="vertical">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/white"
+                                android:text="Reby陪你过中秋"/>
+                            <TextView
+                                android:textColor="@color/white"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/size_s5"
+                                android:text="这个中秋不孤单"/>
+                        </LinearLayout>
+
+
+
+                    </FrameLayout>
+
+                    <LinearLayout
+                        android:layout_marginLeft="@dimen/margin_s2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+
+                            <ImageView
+                                android:layout_width="@dimen/width_s21"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_charity" />
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="大四义卖"
+                                    android:layout_marginLeft="@dimen/margin_s3"
+                                    android:layout_marginTop="@dimen/margin_s3"
+                                    android:textColor="@color/light_green"
+                                    android:textSize="@dimen/size_s5"/>
+
+                                <TextView
+                                    android:layout_width="@dimen/width_s23"
+                                    android:layout_height="@dimen/height_s12"
+                                    android:layout_marginTop="4dp"
+                                    android:layout_marginLeft="@dimen/size_s3"
+                                    android:text="来自学长学姐最后的礼物"
+                                    android:textSize="@dimen/size_s3"/>
+                            </LinearLayout>
+                        </LinearLayout>
+                        <View
+                            android:layout_width="match_parent"
+                            android:background="@color/grey"
+                            android:layout_height="2dp"/>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+                            <ImageView
+                                android:layout_width="@dimen/width_s21"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_book"
+                                />
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+                                <TextView
+                                    android:layout_marginTop="@dimen/size_s3"
+                                    android:layout_marginLeft="@dimen/size_s3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="漂流书屋"
+                                    android:textColor="@color/orange"
+                                    android:textSize="@dimen/size_s5"/>
+
+                                <TextView
+                                    android:layout_width="92dp"
+                                    android:layout_height="48dp"
+                                    android:layout_marginTop="4dp"
+                                    android:layout_marginLeft="@dimen/size_s3"
+                                    android:text="让我们一起把书漂起来"
+                                    android:textSize="@dimen/size_s3"/>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+                        <View
+                            android:layout_width="match_parent"
+                            android:background="@color/grey"
+                            android:layout_height="2dp"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+            <android.support.v7.widget.RecyclerView
+                android:nestedScrollingEnabled="false"
+                android:id="@+id/recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            </android.support.v7.widget.RecyclerView>
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</LinearLayout>

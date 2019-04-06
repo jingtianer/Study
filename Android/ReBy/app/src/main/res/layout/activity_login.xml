@@ -77,6 +77,8 @@
         android:textColor="#FFFFFF"
         android:textSize="@dimen/size_s6"
         />
+
+
     <Button
         android:id="@+id/btn_sign_up"
         android:layout_width="@dimen/width_s75"

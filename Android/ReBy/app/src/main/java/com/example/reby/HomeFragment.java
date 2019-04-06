@@ -5,20 +5,18 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
-import android.widget.TextView;
-
-import com.youth.banner.Banner;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.ScheduledExecutorService;
 
 
 /**
@@ -37,6 +35,7 @@ public class HomeFragment extends Fragment{
     List<String> titleData;
     int CURRENTPAGE = 0;
     boolean VIEWPAGERSCROLLSTATUS = false;
+    private List<GoodsModel> goodsModelList = new ArrayList<>();
 
 
     Handler handler = new Handler(){
@@ -45,22 +44,29 @@ public class HomeFragment extends Fragment{
             if(!VIEWPAGERSCROLLSTATUS){
                 viewPager.setCurrentItem(++CURRENTPAGE);
             }
-            handler.sendEmptyMessageDelayed(1,1000);
+            handler.sendEmptyMessageDelayed(1,3000);
         }
     };
 
+    @Nullable
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.fragment_home,container,false);
+        RecyclerView recyclerView = view.findViewById(R.id.recycler_view);
+        LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());//不一样
 
+       // recyclerView.setLayoutManager(layoutManager);
+        recyclerView.setLayoutManager (new GridLayoutManager(getActivity (),2,layoutManager.VERTICAL,false));//简单的更换列数
+        RecyclerviewAdapter adapter = new RecyclerviewAdapter(goodsModelList);
+        recyclerView.setAdapter(adapter);
 
         data = new ArrayList<>();
-        data.add(R.drawable.hua_1);
-        data.add(R.drawable.hua_2);
-        data.add(R.drawable.lou_1);
-        data.add(R.drawable.lou_2);
-        data.add(R.drawable.lou_3);
-        viewPager = (ViewPager)getView().findViewById(R.id.viewpager);
+        data.add(R.drawable.ic_flower_1);
+        data.add(R.drawable.ic_tower_1);
+        data.add(R.drawable.ic_flower_2);
+        data.add(R.drawable.ic_tower_2);
+        data.add(R.drawable.ic_tower_3);
+        viewPager = view.findViewById(R.id.viewpager);
         viewPageAdapter = new ViewPageAdapter(data);
         viewPager.setAdapter(viewPageAdapter);
 
@@ -70,12 +76,13 @@ public class HomeFragment extends Fragment{
 
             }
 
+
             @Override
             public void onPageSelected(int position) {
                 if(position == data.size()-1){
-                    CURRENTPAGE = 1;
+                    CURRENTPAGE = 0;
                 }else if(position == 0){
-                    CURRENTPAGE = data.size() - 2;
+                    CURRENTPAGE = data.size() - 5;
                 }else{
                     CURRENTPAGE = position;
                 }
@@ -93,7 +100,8 @@ public class HomeFragment extends Fragment{
 
             }
         });
-        handler.sendEmptyMessageDelayed(1,1000);
+
+        handler.sendEmptyMessageDelayed(1,3000);
         viewPager.setPageTransformer(true, new ViewPager.PageTransformer() {
             @Override
             public void transformPage(@NonNull View page, float position) {
@@ -113,12 +121,18 @@ public class HomeFragment extends Fragment{
             }
         });
 
+        initGoodmodel();
 
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home, container, false);
+
+        return view;
+
 
     }
+    public void initGoodmodel(){
+        for(int i = 0; i<100;i++){
+            GoodsModel first = new GoodsModel(R.drawable.ic_uniform,"经典永不过时");
+            goodsModelList.add(first);
 
-
-
+        }
+    }
 }
