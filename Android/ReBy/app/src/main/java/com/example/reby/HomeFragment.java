@@ -55,6 +55,12 @@ public class HomeFragment extends Fragment{
         RecyclerView recyclerView = view.findViewById(R.id.recycler_view);
         LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());//不一样
 
+        recyclerView.setFocusable(false);//设置页面在从顶端开始
+
+
+        recyclerView.setHasFixedSize(true);
+        recyclerView.setNestedScrollingEnabled(false);
+
        // recyclerView.setLayoutManager(layoutManager);
         recyclerView.setLayoutManager (new GridLayoutManager(getActivity (),2,layoutManager.VERTICAL,false));//简单的更换列数
         RecyclerviewAdapter adapter = new RecyclerviewAdapter(goodsModelList);
@@ -129,9 +135,15 @@ public class HomeFragment extends Fragment{
 
     }
     public void initGoodmodel(){
-        for(int i = 0; i<100;i++){
-            GoodsModel first = new GoodsModel(R.drawable.ic_uniform,"经典永不过时");
+        for(int i = 0; i<10;i++){
+            GoodsModel first = new GoodsModel(R.drawable.ic_uniform,"￥100.8","青春的回忆，带给你最清纯的美好",R.drawable.ic_sale,R.drawable.ic_no_thing_for_thing,R.drawable.ic_no_talk);
             goodsModelList.add(first);
+            GoodsModel second = new GoodsModel(R.drawable.ic_uniform,"￥200.0","青春的回忆，带给你最清纯的美好",R.drawable.ic_sale, R.drawable.ic_thing_for_thing,R.drawable.ic_no_talk);
+            goodsModelList.add(second);
+            GoodsModel third = new GoodsModel(R.drawable.ic_uniform,"￥400.0","青春的回忆，带给你最清纯的美好",R.drawable.ic_no_sale,R.drawable.ic_thing_for_thing,R.drawable.ic_no_talk);
+            goodsModelList.add(third);
+            GoodsModel fourth = new GoodsModel(R.drawable.ic_uniform,"￥250.0","青春的回忆，带给你最清纯的美好",R.drawable.ic_sale, R.drawable.ic_thing_for_thing,R.drawable.ic_no_talk);
+            goodsModelList.add(fourth);
 
         }
     }

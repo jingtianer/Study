@@ -18,11 +18,19 @@ public class RecyclerviewAdapter extends RecyclerView.Adapter<RecyclerviewAdapte
     private Context mContext;
     static class ViewHolder extends RecyclerView.ViewHolder{
         ImageView goodsImage;
-        TextView goodsIntrocuction;
+        TextView goodsPrice;
+        TextView goodsIntroduction;
+        ImageView goodsSale;
+        ImageView goodsThing;
+        ImageView goodNoTalk;
         public ViewHolder(View view){
             super(view);
             goodsImage = (ImageView) view.findViewById(R.id.goodsImage);
-            goodsIntrocuction = (TextView) view.findViewById(R.id.goodsIntroduction);
+            goodsPrice = (TextView) view.findViewById(R.id.price);
+            goodsIntroduction = (TextView) view.findViewById(R.id.goods_introduction);
+            goodsSale = (ImageView) view.findViewById(R.id.sale);
+            goodsThing = (ImageView) view.findViewById(R.id.thing_for_thing );
+            goodNoTalk = (ImageView) view.findViewById(R.id.no_talk);
         }
     }
     public RecyclerviewAdapter(List<GoodsModel> goodsModelList){
@@ -42,7 +50,11 @@ public class RecyclerviewAdapter extends RecyclerView.Adapter<RecyclerviewAdapte
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         GoodsModel goodsModel = mGoodsList.get(position);
         holder.goodsImage.setImageResource(goodsModel.getImageId());
-        holder.goodsIntrocuction.setText(goodsModel.getIntroduction());
+        holder.goodsPrice.setText(goodsModel.getGoodsPrice());
+        holder.goodsIntroduction.setText(goodsModel.getIntroduction());
+        holder.goodsSale.setImageResource(goodsModel.getImg_saleId());
+        holder.goodsThing.setImageResource(goodsModel.getImg_thingId());
+        holder.goodNoTalk.setImageResource(goodsModel.getImg_notalkId());
     }
 
     @Override

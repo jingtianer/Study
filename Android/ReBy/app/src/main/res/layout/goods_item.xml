@@ -2,24 +2,81 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
-    android:layout_width="match_parent"
+    android:layout_width="186dp"
     android:layout_height="wrap_content">
 
-        <ImageView
-            android:layout_width="@dimen/width_s40"
-            android:layout_height="@dimen/height_s40"
-            android:layout_marginTop="@dimen/size_s3"
-            android:layout_marginLeft="@dimen/size_s3"
-            android:layout_marginRight="@dimen/size_s3"
-            android:layout_marginBottom="@dimen/size_s3"
-            android:scaleType="fitXY"
-            android:src="@drawable/ic_uniform" />
-        <TextView
-            android:layout_marginLeft="@dimen/size_s3"
-            android:id="@+id/goodsIntroduction"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            />
+       <FrameLayout
+           android:background="#EDEDED"
+           android:layout_width="match_parent"
+           android:layout_height="240dp">
+               <ImageView
+                   android:id="@+id/goodsImage"
+                   android:layout_width="@dimen/width_s40"
+                   android:layout_height="@dimen/height_s40"
+                   android:layout_marginTop="@dimen/size_s3"
+                   android:layout_marginLeft="@dimen/size_s3"
+                   android:layout_marginRight="@dimen/size_s3"
+                   android:layout_marginBottom="@dimen/size_s3"
+                   android:scaleType="fitXY"
+                   android:src="@drawable/ic_uniform" />
+               <LinearLayout
+                   android:layout_width="160dp"
+                   android:layout_height="40dp"
+                   android:layout_marginLeft="12dp"
+                   android:layout_marginBottom="64dp"
+                   android:background="#80000000"
+                   android:layout_gravity="bottom">
+                       <TextView
+                           android:id="@+id/price"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:text="￥189.0"
+                           android:textColor="@color/orange"
+                           android:layout_gravity="bottom"
+                           android:textSize="20sp"/>
+                       <ImageView
+                           android:id="@+id/heart"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:layout_gravity="bottom"
+                           android:layout_marginLeft="@dimen/margin_s13"
+                           android:src="@drawable/ic_heart"/>
+               </LinearLayout>
+           <TextView
+               android:id="@+id/goods_introduction"
+               android:layout_marginTop="180dp"
+               android:layout_marginLeft="@dimen/margin_s3"
+               android:layout_marginRight="@dimen/margin_s3"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content" />
+           <LinearLayout
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_gravity="bottom">
+               <ImageView
+                   android:id="@+id/sale"
+                   android:layout_marginBottom="2dp"
+                   android:layout_marginLeft="@dimen/margin_s2"
+                   android:layout_width="40dp"
+                   android:layout_height="wrap_content"
+                   android:src="@drawable/ic_sale"/>
+               <ImageView
+                   android:id="@+id/thing_for_thing"
+                   android:layout_marginBottom="2dp"
+                   android:layout_marginLeft="@dimen/margin_s2"
+                   android:layout_width="40dp"
+                   android:layout_height="wrap_content"
+                   android:src="@drawable/ic_thing_for_thing"/>
+               <ImageView
+                   android:id="@+id/no_talk"
+                   android:layout_marginBottom="2dp"
+                   android:layout_marginLeft="@dimen/margin_s2"
+                   android:layout_width="40dp"
+                   android:layout_height="wrap_content"
+                   android:src="@drawable/ic_no_talk"/>
+
+           </LinearLayout>
+       </FrameLayout>
 
 
 </LinearLayout>
