@@ -15,13 +15,19 @@
         android:layout_marginTop="@dimen/margin_46"
         android:src="@drawable/ic_welcome_logo" />
 
-    <TextView
-        android:id="@+id/welcome_introduction"
-        android:layout_width="@dimen/height_s80"
-        android:layout_height="@dimen/height_s8"
-        android:layout_gravity="center"
-        android:layout_marginTop="@dimen/height_s80"
-        android:text="@string/text_welcome" />
+   <LinearLayout
+       android:layout_gravity="bottom"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:orientation="vertical">
+       <TextView
+           android:id="@+id/welcome_introduction"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_gravity="center_horizontal"
+           android:layout_marginTop="@dimen/height_s35"
+           android:text="@string/text_welcome" />
+   </LinearLayout>
 
 
 </LinearLayout>

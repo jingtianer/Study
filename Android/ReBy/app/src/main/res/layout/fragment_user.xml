@@ -1,14 +1,158 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".UserFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@color/orange">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="我的"
+            android:textColor="@color/white"
+            android:layout_marginLeft="@dimen/margin_s3"
+            android:textSize="@dimen/size_s6"
+            android:layout_gravity="bottom"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:background="@drawable/ic_user">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:orientation="horizontal"
+            android:background="#E0DEDEDE">
+            <com.example.reby.CircleImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginLeft="@dimen/margin_s5"
+                android:layout_marginTop="30dp"
+                android:src="@drawable/ic_user" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_s13"
+                    android:layout_marginLeft="@dimen/margin_s5"
+                    android:text="大脸猫"
+                    android:textSize="@dimen/size_s5">
+                </TextView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="我不想返工,代码使我快乐"
+                    android:layout_marginLeft="@dimen/margin_s5"
+                    android:layout_marginTop="@dimen/margin_s3">
+
+                </TextView>
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:background="@color/orange" >
+
+    </View>
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:background="#E0E0E0">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical">
 
-</FrameLayout>
+            <Button
+                android:id="@+id/btn_user_info"
+                android:layout_width="match_parent"
+                android:drawableLeft="@drawable/ic_personal_info"
+                android:drawableRight="@drawable/ic_to"
+                android:layout_height="60dp"
+                android:background="@color/white"
+                android:text="个人信息"/>
+            
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#A8A8A8">
+
+            </View>
+
+            <Button
+                android:id="@+id/btn_shop"
+                android:layout_width="match_parent"
+                android:drawableLeft="@drawable/ic_shop"
+                android:drawableRight="@drawable/ic_to"
+                android:layout_height="60dp"
+                android:background="@color/white"
+                android:text="我的小店"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#A8A8A8"/>
+
+            <Button
+                android:id="@+id/btn_order"
+                android:layout_width="match_parent"
+                android:drawableLeft="@drawable/ic_order"
+                android:drawableRight="@drawable/ic_to"
+                android:layout_height="60dp"
+                android:background="@color/white"
+                android:text="我的订单"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:background="@color/orange">
+            </View>
+
+            <Button
+                android:id="@+id/btn_collection"
+                android:layout_width="match_parent"
+                android:drawableLeft="@drawable/ic_collection"
+                android:drawableRight="@drawable/ic_to"
+                android:layout_height="60dp"
+                android:background="@color/white"
+                android:text="我的收藏"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#A8A8A8">
+            </View>
+
+            <Button
+                android:id="@+id/btn_install"
+                android:layout_width="match_parent"
+                android:drawableLeft="@drawable/ic_install"
+                android:drawableRight="@drawable/ic_to"
+                android:layout_height="60dp"
+                android:background="@color/white"
+                android:text="我的设置"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#A8A8A8">
+            </View>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

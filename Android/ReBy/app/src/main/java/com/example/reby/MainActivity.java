@@ -36,6 +36,8 @@ public class MainActivity extends FragmentActivity implements RadioGroup.OnCheck
                     WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS,
                     WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
         }
+
+
         setContentView(R.layout.activity_main);
 
          fragments = getFragments();//把获取的碎片添加到fragments里

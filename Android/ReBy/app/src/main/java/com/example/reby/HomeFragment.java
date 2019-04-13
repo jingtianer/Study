@@ -1,6 +1,7 @@
 package com.example.reby;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -14,6 +15,8 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.Button;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,13 +25,15 @@ import java.util.List;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class HomeFragment extends Fragment{
+public class HomeFragment extends Fragment implements View.OnClickListener {
 
     public HomeFragment() {
         // Required empty public constructor
     }
 
 
+    Button btn_look_around;
+    Button btn_to_sell;
     ViewPager viewPager;
     ViewPageAdapter viewPageAdapter;
     List<Integer> data;
@@ -48,14 +53,28 @@ public class HomeFragment extends Fragment{
         }
     };
 
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+    }
+
+
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_home,container,false);
+
+        btn_look_around = view.findViewById(R.id.btn_look_around);
+        btn_to_sell = view.findViewById(R.id.btn_to_sell);
+
+        btn_look_around.setOnClickListener(this);
+        btn_to_sell.setOnClickListener(this);
+
         RecyclerView recyclerView = view.findViewById(R.id.recycler_view);
         LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());//不一样
 
-        recyclerView.setFocusable(false);//设置页面在从顶端开始
+        recyclerView.setFocusable(false);//设置页面在从顶端开始,取消焦点
 
 
         recyclerView.setHasFixedSize(true);
@@ -64,7 +83,25 @@ public class HomeFragment extends Fragment{
        // recyclerView.setLayoutManager(layoutManager);
         recyclerView.setLayoutManager (new GridLayoutManager(getActivity (),2,layoutManager.VERTICAL,false));//简单的更换列数
         RecyclerviewAdapter adapter = new RecyclerviewAdapter(goodsModelList);
+        /*adapter.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent =  new Intent(getActivity(),GoodsIntroActivity.class);
+                startActivity(intent);
+            }
+        });*/
+
+
         recyclerView.setAdapter(adapter);
+
+        adapter.setOnItemClickListener(new RecyclerviewAdapter.OnItemClickListener() {
+            @Override
+            public void onClick(int position) {
+               Intent intent = new Intent(getActivity(),GoodsIntroActivity.class);
+               startActivity(intent);
+            }
+        });
+
 
         data = new ArrayList<>();
         data.add(R.drawable.ic_flower_1);
@@ -107,6 +144,7 @@ public class HomeFragment extends Fragment{
             }
         });
 
+        viewPager.clearAnimation();
         handler.sendEmptyMessageDelayed(1,3000);
         viewPager.setPageTransformer(true, new ViewPager.PageTransformer() {
             @Override
@@ -127,6 +165,8 @@ public class HomeFragment extends Fragment{
             }
         });
 
+        goodsModelList.clear();
+
         initGoodmodel();
 
 
@@ -134,8 +174,25 @@ public class HomeFragment extends Fragment{
 
 
     }
+
+
+    @Override
+    public void onClick(View view) {
+        switch(view.getId()){
+            case R.id.btn_look_around:
+                Intent intent = new Intent(getActivity(),LookAroundActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.btn_to_sell:
+                Intent intent2 = new Intent(getActivity(),ToSellActivity.class);
+                startActivity(intent2);
+                break;
+        }
+    }
+
+
     public void initGoodmodel(){
-        for(int i = 0; i<10;i++){
+        for(int i = 0; i<3;i++){
             GoodsModel first = new GoodsModel(R.drawable.ic_uniform,"￥100.8","青春的回忆，带给你最清纯的美好",R.drawable.ic_sale,R.drawable.ic_no_thing_for_thing,R.drawable.ic_no_talk);
             goodsModelList.add(first);
             GoodsModel second = new GoodsModel(R.drawable.ic_uniform,"￥200.0","青春的回忆，带给你最清纯的美好",R.drawable.ic_sale, R.drawable.ic_thing_for_thing,R.drawable.ic_no_talk);

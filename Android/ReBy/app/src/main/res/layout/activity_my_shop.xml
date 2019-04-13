@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MyShopActivity">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_marginLeft="@dimen/margin_s2"
+            android:layout_width="70dip"
+            android:layout_height="70dip"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_user"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="阿狸的小店"
+                android:textSize="@dimen/size_s5"
+                android:layout_marginTop="@dimen/margin_s2"
+               android:layout_marginLeft="@dimen/margin_s2"/>
+            <TextView
+                android:layout_gravity="bottom"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="@dimen/margin_s2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="在售商品5件         已售出10件"/>
+        </LinearLayout>
+
+    </LinearLayout>
+   <TextView
+       android:layout_marginLeft="@dimen/margin_s2"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:text="物美价廉，经济实惠，快来挑选"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_marginLeft="@dimen/margin_s2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tel:"
+            android:textSize="@dimen/size_s5"
+            android:textColor="@color/orange"/>
+        <TextView
+            android:layout_marginLeft="@dimen/margin_s2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1837958088"
+            android:textSize="@dimen/size_s5"
+            android:textColor="@color/black"/>
+        <TextView
+            android:layout_marginLeft="@dimen/margin_s5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="QQ:"
+            android:textSize="@dimen/size_s5"
+            android:textColor="@color/orange"/>
+        <TextView
+            android:layout_marginLeft="@dimen/margin_s2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1254763408"
+            android:textSize="@dimen/size_s5"
+            android:textColor="@color/black"/>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#ADADAD">
+
+    </View>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RadioGroup
+            android:id="@+id/radio_shop"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radio_on_sell"
+                style="@style/radiobutton_style"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:text="正在销售"
+                android:textSize="@dimen/size_s5" />
+            <View
+                android:layout_gravity="center"
+                android:layout_width="2dp"
+                android:layout_height="40dp"
+                android:background="@color/orange">
+
+            </View>
+
+            <RadioButton
+                android:id="@+id/radio_success_sell"
+                style="@style/radiobutton_style"
+                android:layout_width="wrap_content"
+                android:layout_height="51dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:text="成功销售"
+                android:textSize="@dimen/size_s5" />
+
+        </RadioGroup>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/shop_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+    </LinearLayout>
+</LinearLayout>

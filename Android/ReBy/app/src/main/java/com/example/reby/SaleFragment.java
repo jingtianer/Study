@@ -1,18 +1,19 @@
 package com.example.reby;
 
 
-import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
+        import android.content.Intent;
+        import android.os.Bundle;
+        import android.support.annotation.NonNull;
+        import android.support.annotation.Nullable;
+        import android.support.v4.app.Fragment;
+        import android.support.v7.widget.LinearLayoutManager;
+        import android.support.v7.widget.RecyclerView;
+        import android.view.LayoutInflater;
+        import android.view.View;
+        import android.view.ViewGroup;
 
-import java.util.ArrayList;
-import java.util.List;
+        import java.util.ArrayList;
+        import java.util.List;
 
 
 /**
@@ -38,12 +39,23 @@ public class SaleFragment extends Fragment {
         SaleAdapter saleAdapter = new SaleAdapter(saleModelList);
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setAdapter(saleAdapter);
+
+        saleAdapter.setOnItemClickListener(new SaleAdapter.OnItemClickListener() {
+            @Override
+            public void onClick(int position) {
+                Intent intent = new Intent(getActivity(),GoodsIntroActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        saleModelList.clear();
         initSaleView();
         return view;
     }
 
+
     public void initSaleView(){
-        for(int i = 0;i < 5;i++){
+        for(int i = 0;i <1;i++){
             SaleModel first = new SaleModel(R.drawable.ic_sale_lady, "淑女学生蕾丝连衣裙，修身甜美小清新",
                     "180.0", "2019.4.17","10");
             saleModelList.add(first);

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <ImageView
+            android:id="@+id/look_lady"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:src="@drawable/ic_sale_lady"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/look_name"
+                android:layout_marginLeft="@dimen/margin_s2"
+                android:layout_marginRight="@dimen/margin_s2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="淑女学生蕾丝连衣裙，修身甜美小清新"
+                android:textSize="18sp"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/look_sale"
+                    android:layout_marginLeft="@dimen/margin_s2"
+                    android:scaleType="centerInside"
+                    android:layout_width="40dip"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_sale"/>
+                <ImageView
+                    android:id="@+id/look_no_talk"
+                    android:layout_marginLeft="@dimen/margin_s2"
+                    android:scaleType="centerInside"
+                    android:layout_width="40dip"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_no_talk"/>
+            </LinearLayout>
+            <TextView
+                android:id="@+id/look_price"
+                android:layout_marginLeft="@dimen/margin_s2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="￥1000"
+                android:textSize="28sp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_marginLeft="@dimen/margin_s3"
+                    android:layout_width="20dip"
+                    android:layout_height="wrap_content"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_eye"/>
+                <TextView
+                    android:id="@+id/look_number"
+                    android:layout_marginLeft="@dimen/margin_s2"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1090"/>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="120dp"
+                    android:src="@drawable/ic_heart"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

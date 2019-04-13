@@ -12,6 +12,16 @@ import java.util.List;
 
 public class SaleAdapter extends RecyclerView.Adapter<SaleAdapter.ViewHolder> {
     private List<SaleModel> mSaleModelList;
+
+    public  interface OnItemClickListener{
+        void onClick(int position);
+    }
+
+    private SaleAdapter.OnItemClickListener listener;
+    public void setOnItemClickListener(SaleAdapter.OnItemClickListener listener){
+        this.listener = listener;
+    }
+
     static class ViewHolder extends RecyclerView.ViewHolder{
         ImageView saleLady;
         TextView saleName;
@@ -41,13 +51,22 @@ public class SaleAdapter extends RecyclerView.Adapter<SaleAdapter.ViewHolder> {
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull ViewHolder holder, final int position) {
         SaleModel saleModel = mSaleModelList.get(position);
         holder.saleLady.setImageResource(saleModel.getImgLadyId());
         holder.saleName.setText(saleModel.getSaleName());
         holder.salePrice.setText(saleModel.getSalePrice());
         holder.saleDedLine.setText(saleModel.getDeadLine());
         holder.saleParticipateNumer.setText(saleModel.getParticipateNumber());
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (listener != null) {
+                    listener.onClick(position);
+                }
+            }
+        });
     }
 
     @Override

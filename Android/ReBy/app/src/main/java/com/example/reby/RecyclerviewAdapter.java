@@ -7,6 +7,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -15,7 +16,16 @@ import java.util.List;
 
 public class RecyclerviewAdapter extends RecyclerView.Adapter<RecyclerviewAdapter.ViewHolder>{
     private List<GoodsModel> mGoodsList;
+    public  interface OnItemClickListener{
+       void onClick(int position);
+    }
+
+    private OnItemClickListener listener;
+    public void setOnItemClickListener(OnItemClickListener listener){
+        this.listener = listener;
+    }
     private Context mContext;
+
     static class ViewHolder extends RecyclerView.ViewHolder{
         ImageView goodsImage;
         TextView goodsPrice;
@@ -44,10 +54,11 @@ public class RecyclerviewAdapter extends RecyclerView.Adapter<RecyclerviewAdapte
                 .inflate(R.layout.goods_item,parent,false);
         ViewHolder holder = new ViewHolder(view);
         return holder;
+
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull ViewHolder holder, final int position) {
         GoodsModel goodsModel = mGoodsList.get(position);
         holder.goodsImage.setImageResource(goodsModel.getImageId());
         holder.goodsPrice.setText(goodsModel.getGoodsPrice());
@@ -55,10 +66,24 @@ public class RecyclerviewAdapter extends RecyclerView.Adapter<RecyclerviewAdapte
         holder.goodsSale.setImageResource(goodsModel.getImg_saleId());
         holder.goodsThing.setImageResource(goodsModel.getImg_thingId());
         holder.goodNoTalk.setImageResource(goodsModel.getImg_notalkId());
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (listener != null) {
+                    listener.onClick(position);
+                }
+            }
+        });
+
+
+
     }
 
     @Override
     public int getItemCount() {
         return mGoodsList.size();
     }
+
+
+
 }

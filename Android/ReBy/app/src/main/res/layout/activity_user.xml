@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".UserActivity">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@color/grey"
+        android:minHeight="?attr/actionBarSize" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="昵称"
+            android:textColor="@color/orange"
+            android:textSize="@dimen/size_s6"
+            android:layout_marginLeft="@dimen/margin_s3"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="大脸猫"
+            android:layout_gravity="center"
+            android:textSize="@dimen/size_s6"/>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/black">
+
+    </View>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="手机号"
+            android:textColor="@color/orange"
+            android:textSize="@dimen/size_s6"
+            android:layout_marginLeft="@dimen/margin_s3"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="23333333"
+            android:layout_gravity="center"
+            android:textSize="@dimen/size_s6"/>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/black">
+
+    </View>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="QQ"
+            android:textColor="@color/orange"
+            android:textSize="@dimen/size_s6"
+            android:layout_marginLeft="@dimen/margin_s3"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="77866899"
+            android:layout_gravity="center"
+            android:textSize="@dimen/size_s6"/>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/black">
+
+    </View>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="个性签名"
+            android:textColor="@color/orange"
+            android:textSize="@dimen/size_s6"
+            android:layout_marginLeft="@dimen/margin_s3"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="我爱代码，代码爱我"
+            android:textSize="@dimen/size_s6" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/black">
+
+    </View>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="头像"
+            android:layout_gravity="center"
+            android:textColor="@color/orange"
+            android:layout_marginLeft="@dimen/margin_s3"
+            android:textSize="@dimen/size_s6"/>
+        <com.example.reby.CircleImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+
+            android:layout_marginLeft="@dimen/margin_s5"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/ic_user" />
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/black">
+
+    </View>
+
+</LinearLayout>

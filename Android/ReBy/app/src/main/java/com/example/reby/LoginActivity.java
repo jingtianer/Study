@@ -58,6 +58,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             startActivity(i);
         }
         activityInit();
+
+        finish();
     }
     public void activityInit(){
         edit_account = (EditText) findViewById(R.id.et_login_account);

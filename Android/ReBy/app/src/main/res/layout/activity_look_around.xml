@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".LookAroundActivity">
+
+
+
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal">
+                <RadioButton
+                    android:layout_gravity="center"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    style="@style/radiobutton_style"
+                    android:background="@drawable/ic_no_talk2"
+                    android:layout_marginLeft="@dimen/margin_s3"
+                    />
+               <TextView
+                   android:layout_gravity="center"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginLeft="@dimen/margin_s3"
+                   android:text="一口价"/>
+                <View
+                    android:layout_marginLeft="@dimen/margin_s3"
+                    android:layout_width="1dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:background="@color/orange">
+
+                </View>
+                <RadioButton
+                    android:layout_gravity="center"
+                    android:layout_width="40dp"
+                    android:layout_height="36dp"
+                    style="@style/radiobutton_style"
+                    android:background="@drawable/ic_exchange"
+                    android:layout_marginLeft="@dimen/margin_s3"
+                    />
+                <TextView
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_s3"
+                    android:text="物换物"/>
+                <View
+                    android:layout_marginLeft="@dimen/margin_s3"
+                    android:layout_width="1dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:background="@color/orange">
+
+                </View>
+
+                <RadioButton
+                    android:layout_gravity="center"
+                    android:layout_width="40dp"
+                    android:layout_height="36dp"
+                    style="@style/radiobutton_style"
+                    android:background="@drawable/ic_auction"
+                    android:layout_marginLeft="@dimen/margin_s3"
+                    />
+                <TextView
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_s3"
+                    android:text="拍卖品"/>
+            </RadioGroup>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/orange">
+
+    </View>
+    <LinearLayout
+        android:background="#FFF68F"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:orientation="horizontal">
+
+           <Button
+               android:layout_gravity="center"
+               android:background="@color/white"
+               android:layout_width="wrap_content"
+               android:layout_height="30dp"
+               android:layout_weight="1"
+               android:layout_marginLeft="@dimen/margin_s3"
+               android:text="生活用品"/>
+           <Button
+               android:layout_gravity="center"
+               android:layout_marginLeft="@dimen/margin_s2"
+               android:background="@color/white"
+               android:layout_width="wrap_content"
+               android:layout_height="30dp"
+               android:layout_weight="1"
+               android:text="学习用品"
+               />
+           <Button
+               android:layout_gravity="center"
+               android:layout_marginLeft="@dimen/margin_s2"
+               android:background="@color/white"
+               android:layout_width="wrap_content"
+               android:layout_height="30dp"
+               android:layout_weight="1"
+               android:text="生活用品"
+               />
+           <Button
+               android:layout_gravity="center"
+               android:layout_marginLeft="@dimen/margin_s2"
+               android:background="@color/white"
+               android:layout_width="wrap_content"
+               android:layout_height="30dp"
+               android:layout_weight="1"
+               android:text="服饰鞋包"
+               />
+           <Button
+               android:layout_gravity="center"
+               android:layout_marginLeft="@dimen/margin_s2"
+               android:background="@color/white"
+               android:layout_width="wrap_content"
+               android:layout_height="30dp"
+               android:layout_weight="1"
+               android:text="其它"
+               android:layout_marginRight="@dimen/margin_s3"
+               />
+
+    </LinearLayout>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/look_around_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </android.support.v7.widget.RecyclerView>
+
+</LinearLayout>
