@@ -5,103 +5,154 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".UserActivity">
+    tools:context=".main.fragment.user.activity.detail.UserActivity">
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:background="@color/grey"
         android:minHeight="?attr/actionBarSize" />
+
+
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="80dp"
+        android:background="@drawable/ic_background_rains"
+        android:orientation="horizontal">
+
+        <com.example.reby.util.CircleImageView
+            android:layout_width="70dp"
+            android:layout_height="100dp"
+
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/margin_s5"
+            android:src="@drawable/ic_user" />
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_gravity="center"
+           android:orientation="vertical">
+          <LinearLayout
+
+              android:clickable="true"
+              android:layout_marginLeft="@dimen/margin_s5"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:orientation="horizontal">
+              <ImageView
+                  android:layout_width="30dp"
+                  android:layout_height="30dp"
+                  android:layout_marginLeft="180dp"
+                  android:src="@drawable/ic_pen2"
+                  android:layout_gravity="center"/>
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_gravity="center"
+                  android:text="点击修改"/>
+          </LinearLayout>
+
+       </LinearLayout>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/black">
+
+    </View>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
         android:orientation="horizontal">
 
         <TextView
-            android:layout_width="100dp"
+            android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="昵称"
+            android:text="昵称:"
             android:textColor="@color/orange"
-            android:textSize="@dimen/size_s6"
+            android:textSize="@dimen/size_s3"
             android:layout_marginLeft="@dimen/margin_s3"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="大脸猫"
+            android:layout_marginLeft="@dimen/margin_s2"
             android:layout_gravity="center"
-            android:textSize="@dimen/size_s6"/>
+            android:textSize="@dimen/size_s3"/>
     </LinearLayout>
     <View
         android:layout_width="match_parent"
-        android:layout_height="2dp"
+        android:layout_height="1px"
         android:background="@color/black">
 
     </View>
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="40dp"
         android:orientation="horizontal">
 
         <TextView
-            android:layout_width="100dp"
+            android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="手机号"
+            android:text="手机号:"
             android:textColor="@color/orange"
-            android:textSize="@dimen/size_s6"
+            android:textSize="@dimen/size_s3"
             android:layout_marginLeft="@dimen/margin_s3"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="23333333"
+            android:layout_marginLeft="@dimen/margin_s2"
             android:layout_gravity="center"
-            android:textSize="@dimen/size_s6"/>
+            android:textSize="@dimen/size_s3"/>
     </LinearLayout>
     <View
         android:layout_width="match_parent"
-        android:layout_height="2dp"
+        android:layout_height="1px"
         android:background="@color/black">
 
     </View>
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="40dp"
         android:orientation="horizontal">
 
         <TextView
-            android:layout_width="100dp"
+            android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="QQ"
+            android:text="QQ:"
             android:textColor="@color/orange"
-            android:textSize="@dimen/size_s6"
+            android:textSize="@dimen/size_s3"
             android:layout_marginLeft="@dimen/margin_s3"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="77866899"
+            android:layout_marginLeft="@dimen/margin_s2"
             android:layout_gravity="center"
-            android:textSize="@dimen/size_s6"/>
+            android:textSize="@dimen/size_s3"/>
     </LinearLayout>
     <View
         android:layout_width="match_parent"
-        android:layout_height="2dp"
+        android:layout_height="1px"
         android:background="@color/black">
 
     </View>
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="40dp"
         android:orientation="horizontal">
 
         <TextView
-            android:layout_width="100dp"
+            android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="个性签名"
             android:textColor="@color/orange"
-            android:textSize="@dimen/size_s6"
+            android:textSize="@dimen/size_s3"
             android:layout_marginLeft="@dimen/margin_s3"/>
 
         <TextView
@@ -109,41 +160,18 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="我爱代码，代码爱我"
-            android:textSize="@dimen/size_s6" />
+            android:layout_marginLeft="@dimen/margin_s2"
+            android:textSize="@dimen/size_s3" />
 
     </LinearLayout>
 
     <View
         android:layout_width="match_parent"
-        android:layout_height="2dp"
+        android:layout_height="1px"
         android:background="@color/black">
 
     </View>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <TextView
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:text="头像"
-            android:layout_gravity="center"
-            android:textColor="@color/orange"
-            android:layout_marginLeft="@dimen/margin_s3"
-            android:textSize="@dimen/size_s6"/>
-        <com.example.reby.CircleImageView
-            android:layout_width="100dp"
-            android:layout_height="100dp"
 
-            android:layout_marginLeft="@dimen/margin_s5"
-            android:layout_marginTop="30dp"
-            android:src="@drawable/ic_user" />
-    </LinearLayout>
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="2dp"
-        android:background="@color/black">
-
-    </View>
 
 </LinearLayout>

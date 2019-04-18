@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".SettingActivity">
+    tools:context=".main.fragment.user.activity.setting.SettingActivity">
 
     <LinearLayout
         android:layout_width="match_parent"

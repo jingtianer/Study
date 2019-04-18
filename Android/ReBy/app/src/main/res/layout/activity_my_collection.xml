@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MyCollectionActivity">
+    tools:context=".main.fragment.user.activity.collection.MyCollectionActivity">
     <android.support.v7.widget.RecyclerView
         android:id="@+id/collection_view"
         android:layout_width="match_parent"

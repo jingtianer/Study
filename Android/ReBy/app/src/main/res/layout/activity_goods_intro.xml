@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".GoodsIntroActivity">
+    tools:context=".main.fragment.home.activity.lookactivity.activity.GoodsIntroActivity">
 
 
 
@@ -45,7 +45,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginLeft="@dimen/margin_s12"
+                android:layout_marginLeft="@dimen/margin_s5"
                 android:src="@drawable/ic_heart" />
         </LinearLayout>
 
@@ -128,7 +128,7 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
 
-                    <ImageView
+                    <com.example.reby.util.CircleImageView
                         android:layout_width="70dip"
                         android:layout_height="70dip"
                         android:layout_marginLeft="@dimen/margin_s2"

@@ -11,6 +11,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="首页"
+            android:layout_marginBottom="@dimen/margin_s2"
             android:textColor="@color/white"
             android:layout_marginLeft="@dimen/margin_s3"
             android:textSize="@dimen/size_s6"
@@ -31,61 +32,78 @@
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/height_s40">
             </android.support.v4.view.ViewPager>
-            <View
-                android:background="@color/orange"
-                android:layout_width="match_parent"
-                android:layout_height="2dp" />
+
 
             <LinearLayout
-                android:background="@color/orange"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="60dp"
                 android:orientation="horizontal">
-                <Button
-                    android:id="@+id/btn_look_around"
-                    android:background="#FFFFFF"
-                    android:drawableLeft="@drawable/ic_look_around"
-                    android:layout_gravity="center"
-                    android:layout_width="match_parent"
-                    android:text="@string/text_fragment_btn_look_around"
-                    android:textSize="@dimen/size_s5"
-                    android:layout_height="@dimen/height_s15"
-                    android:layout_weight="1"/>
+                <LinearLayout
+                    android:id="@+id/linearLayout_look"
+                    android:clickable="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_weight="1">
+                    <ImageView
+                        android:layout_gravity="center"
+                        android:layout_width="30dip"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_look_around"
+                        android:scaleType="fitCenter"
+                        android:layout_marginLeft="30dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="随便逛逛"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/margin_s5"/>
+
+                </LinearLayout>
 
                 <View
                     android:background="@color/orange"
                     android:layout_width="2dp"
-                    android:layout_height="match_parent" />
-                <Button
-                    android:id="@+id/btn_to_sell"
-                    android:background="#FFFFFF"
-                    android:drawableLeft="@drawable/ic_on_sale"
-                    android:layout_width="match_parent"
-                    android:layout_height="@dimen/height_s15"
-                    android:text="@string/text_fragment_btn_on_sale"
-                    android:textSize="@dimen/size_s5"
-                    android:layout_weight="1"/>
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"/>
+                <LinearLayout
+                    android:id="@+id/linearLayout_to_sale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:clickable="true">
+                    <ImageView
+                        android:layout_gravity="center"
+                        android:layout_width="30dip"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_on_sale"
+                        android:scaleType="fitCenter"
+                        android:layout_marginLeft="@dimen/margin_s5"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="有货出手"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/margin_s5"/>
+                </LinearLayout>
             </LinearLayout>
-            <View
-                android:background="@color/orange"
-                android:layout_width="match_parent"
-                android:layout_height="2dp" />
 
             <LinearLayout
-                android:background="@color/grey"
+                android:background="#fff8dc"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/height_s50"
                 android:orientation="vertical">
                 <LinearLayout
-                    android:background="@color/white"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
                     <ImageView
+                        android:layout_marginTop="@dimen/margin_s2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:src="@drawable/ic_announce"
                         />
                     <TextView
+                        android:layout_marginTop="@dimen/margin_s2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="精彩活动"/>
@@ -101,6 +119,7 @@
                         android:layout_height="match_parent">
 
                         <ImageView
+                            android:layout_marginLeft="@dimen/margin_s3"
                             android:layout_gravity="center"
                             android:layout_width="@dimen/width_s50"
                             android:layout_height="wrap_content"
@@ -116,12 +135,13 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/white"
-                                android:text="Reby陪你过中秋"/>
+                                android:text="Rebuy陪你过中秋"/>
                             <TextView
                                 android:textColor="@color/white"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textSize="@dimen/size_s5"
+                                android:layout_marginTop="@dimen/margin_s2"
                                 android:text="这个中秋不孤单"/>
                         </LinearLayout>
 
@@ -141,8 +161,9 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1">
 
-                            <ImageView
-                                android:layout_width="@dimen/width_s21"
+                            <com.example.reby.util.CircleImageView
+                                android:layout_width="76dp"
+                                android:layout_gravity="center"
                                 android:layout_height="wrap_content"
                                 android:src="@drawable/ic_charity" />
                             <LinearLayout
@@ -178,8 +199,9 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1">
-                            <ImageView
-                                android:layout_width="@dimen/width_s21"
+                            <com.example.reby.util.CircleImageView
+                                android:layout_gravity="center"
+                                android:layout_width="76dp"
                                 android:layout_height="wrap_content"
                                 android:src="@drawable/ic_book"
                                 />
@@ -218,6 +240,8 @@
 
             </LinearLayout>
             <LinearLayout
+                android:background="#fff8dc"
+                android:layout_marginTop="@dimen/margin_s2"
                 android:layout_width="match_parent"
                 android:layout_height="24dp">
                 <ImageView

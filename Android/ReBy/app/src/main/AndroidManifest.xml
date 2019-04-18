@@ -11,17 +11,17 @@
         android:roundIcon="@drawable/ic_login_logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SettingActivity"></activity>
-        <activity android:name=".MessageDetailActivity" />
-        <activity android:name=".GoodsIntroActivity" />
-        <activity android:name=".MyCollectionActivity" />
-        <activity android:name=".MyOrderActivity" />
-        <activity android:name=".MyShopActivity" />
-        <activity android:name=".ToSellActivity" />
-        <activity android:name=".LookAroundActivity" />
-        <activity android:name=".UserActivity" />
-        <activity android:name=".LoginActivity" />
-        <activity android:name=".WelcomeActivity">
+        <activity android:name=".main.fragment.user.activity.setting.SettingActivity"></activity>
+        <activity android:name=".main.fragment.message.activity.MessageDetailActivity" />
+        <activity android:name=".main.fragment.home.activity.lookactivity.activity.GoodsIntroActivity" />
+        <activity android:name=".main.fragment.user.activity.collection.MyCollectionActivity" />
+        <activity android:name=".main.fragment.user.activity.order.activity.MyOrderActivity" />
+        <activity android:name=".main.fragment.user.activity.shop.activity.MyShopActivity" />
+        <activity android:name=".main.fragment.home.activity.tosellactivity.ToSellActivity" />
+        <activity android:name=".main.fragment.home.activity.lookactivity.activity.LookAroundActivity" />
+        <activity android:name=".main.fragment.user.activity.detail.UserActivity" />
+        <activity android:name=".account.login.activity.LoginActivity" />
+        <activity android:name=".welcome.WelcomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <action android:name="android.intent.action.VIEW" />
@@ -29,8 +29,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity" />
-        <activity android:name=".RegisterActivity" />
+        <activity android:name=".main.activity.MainActivity" />
+        <activity android:name=".account.register.activity.RegisterActivity" />
     </application>
 
 </manifest>

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MyShopActivity">
+    tools:context=".main.fragment.user.activity.shop.activity.MyShopActivity">
 
 
 
@@ -62,7 +62,7 @@
             android:layout_height="wrap_content"
             android:text="1837958088"
             android:textSize="@dimen/size_s5"
-            android:textColor="@color/black"/>
+            android:textColor="@color/dep_grey"/>
         <TextView
             android:layout_marginLeft="@dimen/margin_s5"
             android:layout_width="wrap_content"
@@ -76,11 +76,11 @@
             android:layout_height="wrap_content"
             android:text="1254763408"
             android:textSize="@dimen/size_s5"
-            android:textColor="@color/black"/>
+            android:textColor="@color/dep_grey"/>
     </LinearLayout>
     <View
         android:layout_width="match_parent"
-        android:layout_height="2dp"
+        android:layout_height="2px"
         android:background="#ADADAD">
 
     </View>

@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".UserFragment">
+    tools:context=".main.fragment.user.fragment.UserFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <LinearLayout
@@ -15,6 +15,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="我的"
+            android:layout_marginBottom="@dimen/margin_s2"
             android:textColor="@color/white"
             android:layout_marginLeft="@dimen/margin_s3"
             android:textSize="@dimen/size_s6"
@@ -29,7 +30,7 @@
             android:layout_height="160dp"
             android:orientation="horizontal"
             android:background="#E0DEDEDE">
-            <com.example.reby.CircleImageView
+            <com.example.reby.util.CircleImageView
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_marginLeft="@dimen/margin_s5"
@@ -79,73 +80,190 @@
             android:background="@color/white"
             android:orientation="vertical">
 
-            <Button
-                android:id="@+id/btn_user_info"
+            <LinearLayout
+                android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:drawableLeft="@drawable/ic_personal_info"
-                android:drawableRight="@drawable/ic_to"
                 android:layout_height="60dp"
-                android:background="@color/white"
-                android:text="个人信息"/>
-            
+                android:clickable="true"
+                android:id="@+id/linearLayout_info">
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_marginLeft="@dimen/margin_s3"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_personal_info"
+                    android:scaleType="fitCenter"/>
+                <TextView
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_s3"
+                    android:text="我的信息"/>
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="200dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_to"
+                  />
+
+            </LinearLayout>
+
             <View
                 android:layout_width="match_parent"
-                android:layout_height="1dp"
+                android:layout_height="1px"
                 android:background="#A8A8A8">
 
             </View>
 
-            <Button
-                android:id="@+id/btn_shop"
+            <LinearLayout
+                android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:drawableLeft="@drawable/ic_shop"
-                android:drawableRight="@drawable/ic_to"
                 android:layout_height="60dp"
-                android:background="@color/white"
-                android:text="我的小店"/>
+                android:clickable="true"
+                android:id="@+id/linearLayout_shop">
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_marginLeft="@dimen/margin_s3"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_shop"
+                    android:scaleType="fitCenter"/>
+                <TextView
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_s3"
+                    android:text="我的小店"/>
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="200dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_to"
+                    />
+            </LinearLayout>
+
+
 
             <View
                 android:layout_width="match_parent"
-                android:layout_height="1dp"
+                android:layout_height="1px"
                 android:background="#A8A8A8"/>
 
-            <Button
-                android:id="@+id/btn_order"
+            <LinearLayout
+                android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:drawableLeft="@drawable/ic_order"
-                android:drawableRight="@drawable/ic_to"
                 android:layout_height="60dp"
-                android:background="@color/white"
-                android:text="我的订单"/>
+                android:clickable="true"
+                android:id="@+id/linearLayout_order">
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_marginLeft="@dimen/margin_s3"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_order"
+                    android:scaleType="fitCenter"/>
+                <TextView
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_s3"
+                    android:text="我的订单"/>
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="200dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_to"
+                    />
+
+            </LinearLayout>
+
+
             <View
                 android:layout_width="match_parent"
-                android:layout_height="4dp"
+                android:layout_height="1px"
                 android:background="@color/orange">
             </View>
 
-            <Button
-                android:id="@+id/btn_collection"
+            <LinearLayout
+                android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:drawableLeft="@drawable/ic_collection"
-                android:drawableRight="@drawable/ic_to"
                 android:layout_height="60dp"
-                android:background="@color/white"
-                android:text="我的收藏"/>
+                android:clickable="true"
+                android:id="@+id/linearLayout_collection">
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_marginLeft="@dimen/margin_s3"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_collection"
+                    android:scaleType="fitCenter"/>
+                <TextView
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_s3"
+                    android:text="我的收藏"/>
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="200dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_to"
+                    />
+
+            </LinearLayout>
+
+
 
             <View
                 android:layout_width="match_parent"
-                android:layout_height="1dp"
+                android:layout_height="1px"
                 android:background="#A8A8A8">
             </View>
 
-            <Button
-                android:id="@+id/btn_install"
+            <LinearLayout
+                android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:drawableLeft="@drawable/ic_install"
-                android:drawableRight="@drawable/ic_to"
                 android:layout_height="60dp"
-                android:background="@color/white"
-                android:text="我的设置"/>
+                android:clickable="true"
+                android:id="@+id/linearLayout_setting">
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_marginLeft="@dimen/margin_s3"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_install"
+                    android:scaleType="fitCenter"/>
+                <TextView
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_s3"
+                    android:text="我的设置"/>
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="200dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_to"
+                    />
+
+            </LinearLayout>
+
+
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"

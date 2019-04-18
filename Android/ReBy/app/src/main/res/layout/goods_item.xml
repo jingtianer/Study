@@ -14,7 +14,7 @@
                    android:layout_width="@dimen/width_s40"
                    android:layout_height="@dimen/height_s40"
                    android:layout_marginTop="@dimen/size_s3"
-                   android:layout_marginLeft="@dimen/size_s3"
+                   android:layout_marginLeft="10dp"
                    android:layout_marginRight="@dimen/size_s3"
                    android:layout_marginBottom="@dimen/size_s3"
                    android:scaleType="fitXY"
@@ -22,7 +22,7 @@
                <LinearLayout
                    android:layout_width="160dp"
                    android:layout_height="40dp"
-                   android:layout_marginLeft="12dp"
+                   android:layout_marginLeft="10dp"
                    android:layout_marginBottom="64dp"
                    android:background="#80000000"
                    android:layout_gravity="bottom">
@@ -32,13 +32,13 @@
                            android:layout_height="wrap_content"
                            android:text="￥189.0"
                            android:textColor="@color/orange"
-                           android:layout_gravity="bottom"
+                           android:layout_gravity="center"
                            android:textSize="20sp"/>
                        <ImageView
                            android:id="@+id/heart"
                            android:layout_width="wrap_content"
                            android:layout_height="wrap_content"
-                           android:layout_gravity="bottom"
+                           android:layout_gravity="center"
                            android:layout_marginLeft="@dimen/margin_s13"
                            android:src="@drawable/ic_heart"/>
                </LinearLayout>
@@ -50,6 +50,7 @@
                android:layout_width="wrap_content"
                android:layout_height="wrap_content" />
            <LinearLayout
+               android:layout_marginLeft="10dp"
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
                android:layout_gravity="bottom">

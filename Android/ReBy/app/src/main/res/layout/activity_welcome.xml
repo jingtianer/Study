@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:layout_gravity="center"
-    tools:context=".WelcomeActivity">
+    tools:context=".welcome.WelcomeActivity">
     <ImageView
         android:id="@+id/welcome_logo"
         android:layout_width="@dimen/width_s50"

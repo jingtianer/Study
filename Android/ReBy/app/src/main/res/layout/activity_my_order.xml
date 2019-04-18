@@ -5,15 +5,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MyOrderActivity">
+    tools:context=".main.fragment.user.activity.order.activity.MyOrderActivity">
 
     <RadioGroup
-        android:id="@+id/radio_group_order"
+        android:id="@+id/group_order"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
         <RadioButton
-            android:id="@+id/radio_un_complete"
+            android:id="@+id/rbtn_un_complete"
             android:layout_width="wrap_content"
             android:layout_height="40dp"
             style="@style/radiobutton_style"
@@ -21,7 +21,7 @@
             android:layout_weight="1"
             />
         <RadioButton
-            android:id="@+id/radio_complete"
+            android:id="@+id/rbtn_complete"
             android:layout_width="wrap_content"
             android:layout_height="40dp"
             style="@style/radiobutton_style"
@@ -30,7 +30,7 @@
             />
     </RadioGroup>
     <LinearLayout
-        android:id="@+id/order_fragment"
+        android:id="@+id/fragment_order"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"

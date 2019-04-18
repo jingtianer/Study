@@ -71,7 +71,7 @@
         android:layout_width="@dimen/width_s75"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:background="#FFD700"
+        android:background="@drawable/button_round2"
         android:layout_marginTop="@dimen/margin_s3"
         android:text="@string/text_login"
         android:textColor="#FFFFFF"
@@ -80,12 +80,13 @@
 
 
     <Button
+
         android:id="@+id/btn_sign_up"
         android:layout_width="@dimen/width_s75"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="@dimen/margin_s3"
-        android:background="@drawable/button_shape"
+        android:background="@drawable/button_round"
         android:text="@string/text_sign_up"
         android:textSize="@dimen/size_s6"
         >
