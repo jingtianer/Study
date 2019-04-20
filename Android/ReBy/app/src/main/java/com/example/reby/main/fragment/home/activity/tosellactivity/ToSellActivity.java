@@ -1,19 +1,42 @@
 package com.example.reby.main.fragment.home.activity.tosellactivity;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 
 import com.example.reby.R;
+import com.example.reby.SpreadActivity;
 
-public class ToSellActivity extends AppCompatActivity {
+
+public class ToSellActivity extends AppCompatActivity implements View.OnClickListener {
+
+    private EditText titleEdit;
+    private Button spreadButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_to_sell);
+        titleEdit = (EditText)findViewById(R.id.edt_title);
+        spreadButton = (Button)findViewById(R.id.btn_spread);
+        spreadButton.setOnClickListener(this);
         initActionBar();
+    }
+
+
+
+    @Override
+    public void onClick(View view){
+        Intent intent = new Intent(ToSellActivity.this, SpreadActivity.class);
+        String title = titleEdit.getText().toString().trim();
+        intent.putExtra("data",title);
+        startActivity(intent);
     }
 
     /**

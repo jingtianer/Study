@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/dep_grey"
+    android:background="@color/grey"
     tools:context=".main.fragment.home.activity.tosellactivity.ToSellActivity">
 
     <LinearLayout
@@ -14,23 +15,24 @@
         android:orientation="vertical"
         android:background="@color/white">
         <EditText
+            android:id="@+id/edt_title"
             android:layout_marginLeft="@dimen/margin_s2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:theme="@style/MyEditText"
             android:hint="标题"/>
 
         <EditText
-            android:layout_gravity="top|left"
             android:singleLine="false"
-            android:padding="4dp"
             android:layout_width="match_parent"
             android:layout_height="100dp"
+           android:theme="@style/MyEditText"
             android:hint="请描述一下你的物品"/>
 
     </LinearLayout>
     <View
         android:layout_width="match_parent"
-        android:layout_height="4dp"
+        android:layout_height="2px"
         android:background="@color/orange">
 
     </View>
@@ -51,6 +53,8 @@
             android:layout_marginLeft="@dimen/margin_s3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:digits="1234567890"
+            android:theme="@style/MyEditText"
             android:hint="点击输入"/>
     </LinearLayout>
 
@@ -70,12 +74,14 @@
             android:layout_marginLeft="@dimen/margin_s3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="点击输入"/>
+            android:digits="0123456789"
+            android:hint="点击输入"
+            android:theme="@style/MyEditText"/>
     </LinearLayout>
 
     <View
         android:layout_width="match_parent"
-        android:layout_height="2dp"
+        android:layout_height="2px"
         android:background="@color/dep_grey">
 
     </View>
@@ -94,7 +100,7 @@
     </LinearLayout>
     <View
         android:layout_width="match_parent"
-        android:layout_height="2dp"
+        android:layout_height="2px"
         android:background="@color/dep_grey">
 
     </View>
@@ -111,28 +117,45 @@
             android:text="出售方式"
             android:textColor="@color/orange"
             android:textSize="18sp"/>
-        <RadioButton
-            android:layout_marginLeft="@dimen/margin_s5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="卖东西"/>
+       <RadioGroup
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal">
+           <RadioButton
+               style="@style/radiobutton_style3"
+               android:drawableLeft="@drawable/check_selector"
+               android:layout_marginLeft="@dimen/margin_s5"
+               android:layout_width="wrap_content"
+               android:layout_height="40dp"
+               android:text="卖东西"
+               android:textSize="12sp"
+               android:textColor="@color/orange"/>
 
-        <RadioButton
-            android:layout_marginLeft="@dimen/margin_s5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="换东西"/>
+           <RadioButton
+               style="@style/radiobutton_style3"
+               android:drawableLeft="@drawable/check_selector"
+               android:layout_marginLeft="@dimen/margin_s5"
+               android:layout_width="wrap_content"
+               android:layout_height="40dp"
+               android:textSize="12sp"
+               android:text="物换物"
+               android:textColor="@color/orange"/>
 
-        <RadioButton
-            android:layout_marginLeft="@dimen/margin_s5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="拍卖"/>
+           <RadioButton
+               style="@style/radiobutton_style3"
+               android:drawableLeft="@drawable/check_selector"
+               android:layout_marginLeft="@dimen/margin_s5"
+               android:layout_width="wrap_content"
+               android:layout_height="40dp"
+               android:text="拍卖"
+               android:textSize="12sp"
+               android:textColor="@color/orange"/>
+       </RadioGroup>
     </LinearLayout>
 
     <View
         android:layout_width="match_parent"
-        android:layout_height="2dp"
+        android:layout_height="2px"
         android:background="@color/dep_grey">
 
     </View>
@@ -153,7 +176,9 @@
             android:layout_marginLeft="@dimen/margin_s3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="点击输入"/>
+            android:theme="@style/MyEditText"
+            android:digits="0123456789."
+            android:hint="点击输入（元）"/>
     </LinearLayout>
 
     <View
@@ -179,12 +204,13 @@
             android:layout_marginLeft="@dimen/margin_s3"
             android:layout_width="match_parent"
             android:layout_height="60dp"
+            android:theme="@style/MyEditText"
             android:hint="点击输入"/>
     </LinearLayout>
 
     <View
         android:layout_width="match_parent"
-        android:layout_height="2dp"
+        android:layout_height="2px"
         android:background="@color/dep_grey">
 
     </View>
@@ -205,12 +231,13 @@
             android:layout_marginLeft="@dimen/margin_s3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="点击输入"/>
+            android:hint="点击输入"
+            android:theme="@style/MyEditText"/>
     </LinearLayout>
 
     <View
         android:layout_width="match_parent"
-        android:layout_height="2dp"
+        android:layout_height="2px"
         android:background="@color/dep_grey">
 
     </View>
@@ -236,28 +263,29 @@
             android:textSize="18sp"/>
 
         <EditText
-            android:layout_marginLeft="@dimen/margin_s3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="点击输入"/>
+            android:hint="输入（元）"
+            android:digits="0123456789"
+            android:theme="@style/MyEditText"/>
         <TextView
-            android:layout_marginLeft="@dimen/margin_s5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="加价:"
             android:textSize="18sp"/>
 
         <EditText
-            android:layout_marginLeft="@dimen/margin_s3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="点击输入"/>
+            android:hint="输入（元）"
+            android:digits="0123456789"
+            android:theme="@style/MyEditText"/>
 
     </LinearLayout>
 
     <View
         android:layout_width="match_parent"
-        android:layout_height="2dp"
+        android:layout_height="2px"
         android:background="@color/dep_grey">
 
     </View>
@@ -311,6 +339,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"/>
                 <Button
+                    android:id="@+id/btn_spread"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:background="@color/red"

@@ -7,26 +7,29 @@
     android:orientation="vertical"
     android:layout_gravity="center"
     tools:context=".welcome.WelcomeActivity">
-    <ImageView
-        android:id="@+id/welcome_logo"
-        android:layout_width="@dimen/width_s50"
-        android:layout_height="@dimen/height_s50"
-        android:layout_gravity="center"
-        android:layout_marginTop="@dimen/margin_46"
-        android:src="@drawable/ic_welcome_logo" />
-
    <LinearLayout
-       android:layout_gravity="bottom"
        android:layout_width="match_parent"
        android:layout_height="match_parent"
        android:orientation="vertical">
+
+       <ImageView
+           android:id="@+id/welcome_logo"
+           android:layout_width="200dp"
+           android:layout_height="200dp"
+           android:layout_gravity="center"
+           android:layout_marginTop="50dp"
+           android:layout_weight="10"
+           android:src="@drawable/ic_welcome_logo" />
+
+
        <TextView
            android:id="@+id/welcome_introduction"
            android:layout_width="wrap_content"
            android:layout_height="wrap_content"
-           android:layout_gravity="center_horizontal"
+           android:layout_gravity="center"
            android:layout_marginTop="@dimen/height_s35"
-           android:text="@string/text_welcome" />
+           android:text="@string/text_welcome"
+           android:layout_weight="0"/>
    </LinearLayout>
 
 

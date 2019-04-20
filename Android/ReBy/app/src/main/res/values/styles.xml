@@ -4,7 +4,7 @@
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/orange</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorPrimaryDark">@color/dep_grey</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
@@ -35,6 +35,14 @@
         <item name="android:gravity">center</item>
         <item name="android:textSize">12sp</item>
         <item name="android:textColor">@drawable/bottom_radio_button_text_selector</item>
+    </style>
+
+    <style name="radiobutton_style3">
+
+        <item name="android:background">@null</item>
+        <item name="android:button">@null</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@drawable/check_selector</item>
     </style>
 
     <style name="heart_select">

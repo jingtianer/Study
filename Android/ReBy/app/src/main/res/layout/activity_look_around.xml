@@ -101,47 +101,52 @@
 
            <Button
                android:layout_gravity="center"
-               android:background="@color/white"
+               android:background="@drawable/button_round"
                android:layout_width="wrap_content"
                android:layout_height="30dp"
                android:layout_weight="1"
                android:layout_marginLeft="@dimen/margin_s3"
-               android:text="生活用品"/>
+               android:text="生活用品"
+               android:textColor="@color/dep_grey"/>
            <Button
                android:layout_gravity="center"
                android:layout_marginLeft="@dimen/margin_s2"
-               android:background="@color/white"
+               android:background="@drawable/button_round"
                android:layout_width="wrap_content"
                android:layout_height="30dp"
                android:layout_weight="1"
                android:text="学习用品"
+               android:textColor="@color/dep_grey"
                />
            <Button
                android:layout_gravity="center"
                android:layout_marginLeft="@dimen/margin_s2"
-               android:background="@color/white"
+               android:background="@drawable/button_round"
                android:layout_width="wrap_content"
                android:layout_height="30dp"
                android:layout_weight="1"
+               android:textColor="@color/dep_grey"
                android:text="生活用品"
                />
            <Button
                android:layout_gravity="center"
                android:layout_marginLeft="@dimen/margin_s2"
-               android:background="@color/white"
+               android:background="@drawable/button_round"
                android:layout_width="wrap_content"
                android:layout_height="30dp"
                android:layout_weight="1"
                android:text="服饰鞋包"
+               android:textColor="@color/dep_grey"
                />
            <Button
                android:layout_gravity="center"
                android:layout_marginLeft="@dimen/margin_s2"
-               android:background="@color/white"
+               android:background="@drawable/button_round"
                android:layout_width="wrap_content"
                android:layout_height="30dp"
                android:layout_weight="1"
                android:text="其它"
+               android:textColor="@color/dep_grey"
                android:layout_marginRight="@dimen/margin_s3"
                />
 

@@ -108,6 +108,7 @@ public class MainActivity extends AppCompatActivity {
 
 ``` 
 # 状态栏的颜色设置
+敬请期待
 # 活动的启动模式
 ![](http://img.blog.csdn.net/20170303202108396?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvSVRlcm1lbmc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
 在使用默认启动方式的时候，我每次打开一个活动，它就新建一个，导致需要按多次去返回，而采用singleTask方法，在Manifest文件里添加
@@ -143,3 +144,70 @@ edit_password.setTransformationMethod(PasswordTransformationMethod.getInstance()
         android:layout_height="1dp"/>
 ```
 然后就有线了。
+# 设置背景色的透明度
+我是万万没想到啊，安卓居然能调颜色的透明度。
+
+---
+# 等比缩放
+android:scaleType可控制图片的缩放方式，示例代码如下：
+```
+
+<ImageView android:id="@+id/img" 
+
+    android:src="@drawable/logo"
+
+    android:scaleType="centerInside"
+
+    android:layout_width="60dip"
+
+    android:layout_height="60dip"
+
+    android:layout_centerVertical="true"/>
+
+```
+说明：centerInside表示按比例缩放图片，使得图片长 (宽)的小于等于视图的相应维度。
+　　注意：控制的图片为资源而不是背景，即android:src="@drawable/logo"，而非android:background="@drawable/logo"，我就笨笨地犯了这个低级错误，导致错怪人家scaleType不起作用。程序中动态加载图片也类似，如：应该imgView.setImageResource(R.drawable.*); 而非imgView.setBackgroundResource(R.drawable.*); 
+
+**附：更详细的scaleType说明：**
+
+android:scaleType是控制图片如何resized/moved来匹对ImageView的size。  
+ImageView.ScaleType / android:scaleType值的意义区别：  
+CENTER /center  按图片的原来size居中显示，当图片长/宽超过View的长/宽，则截取图片的居中部分显示    
+
+CENTER_CROP / centerCrop  按比例扩大图片的size居中显示，使得图片长(宽)等于或大于View的长(宽)      
+
+CENTER_INSIDE / centerInside  将图片的内容完整居中显示，通过按比例缩小或原来的size使得图片长/宽等于或小于View的长/宽  
+
+FIT_CENTER / fitCenter  把图片按比例扩大/缩小到View的宽度，居中显示  
+
+FIT_END / fitEnd   把图片按比例扩大/缩小到View的宽度，显示在View的下部分位置  
+
+FIT_START / fitStart  把图片按比例扩大/缩小到View的宽度，显示在View的上部分位置  
+
+FIT_XY / fitXY  把图片不按比例扩大/缩小到View的大小显示  
+
+MATRIX / matrix 用矩阵来绘制，动态缩小放大图片来显示。  
+
+** 要注意一点，Drawable文件夹里面的图片命名是不能大写的。
+
+
+
+# RecyclerView如何从顶端开始
+嵌套RecyclerView进入页面不在顶部会在RecyclerView的顶部问题，是因为RecyclerView获取了焦点，通过设置
+recyclerView.setFocusable(false);可以解决。   
+
+---
+
+# 解决RecyclerView+Fragment出现的item重复加载的问题
+很简单，比如我是定义了一个方法initSale()（举个例子），那我就在初始化方法之前加上一句 saleModelLsit.clear(),把里面的数据清空，再重新加载就行了
+
+# 解决轮播图自动加快的问题
+
+我也不知道这样做对不对，反正加上一句viewPager.clear()貌似就好了。  
+
+---
+
+#  LinearLayoutManager的不同使用
+在活动中，`LinearLayoutManager layoutManager = new LinearLayoutManager(this)`  
+
+在fragment中，`LinearLayoutManager layoutManager = new LinearLayoutManager(getContext());`

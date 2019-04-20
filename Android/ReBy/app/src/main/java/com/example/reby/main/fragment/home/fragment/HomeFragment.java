@@ -111,9 +111,12 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
     private void initRecyclerView(View view, HomeAdapter adapter) {
         RecyclerView recyclerView = view.findViewById(R.id.recycler_view);
         LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());//不一样
+        recyclerView.setHasFixedSize(true);
+        recyclerView.setNestedScrollingEnabled(false);
         recyclerView.setFocusable(false);//设置页面在从顶端开始,取消焦点
         recyclerView.setLayoutManager(new GridLayoutManager(getActivity(), 2, layoutManager.VERTICAL, false));//简单的更换列数
         recyclerView.setAdapter(adapter);
+        layoutManager.setSmoothScrollbarEnabled(true);
     }
 
 

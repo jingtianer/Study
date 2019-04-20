@@ -1,5 +1,6 @@
 package com.example.reby.main.activity;
 
+import android.app.ActionBar;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.support.v4.app.Fragment;
@@ -40,7 +41,6 @@ public class MainActivity extends FragmentActivity implements RadioGroup.OnCheck
                     WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS,
                     WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
         }
-
 
         setContentView(R.layout.activity_main);
 

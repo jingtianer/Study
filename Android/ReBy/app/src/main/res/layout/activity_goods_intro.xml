@@ -115,7 +115,7 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="20dp"
-                android:background="@color/orange"></View>
+                android:background="@color/grey"></View>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -147,23 +147,78 @@
                             android:layout_marginTop="@dimen/margin_s2"
                             android:text="阿狸的小店"
                             android:textSize="@dimen/size_s5" />
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1px"
+                            android:background="@color/orange">
 
-                        <TextView
+                        </View>
+
+                        <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_gravity="bottom"
-                            android:layout_marginLeft="@dimen/margin_s2"
-                            android:layout_marginTop="16dp"
-                            android:text="在售商品5件         已售出10件" />
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/margin_s2"
+                            android:layout_marginBottom="@dimen/margin_s2"
+                          >
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/button_round2"
+                                android:layout_gravity="bottom"
+                                android:layout_marginLeft="@dimen/margin_s2"
+                                android:text="在售商品5件"
+                                android:textColor="@color/white"
+                                />
+
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/button_round2"
+                                android:layout_gravity="bottom"
+                                android:layout_marginLeft="@dimen/margin_s2"
+
+                                android:text="已售商品10件"
+                                android:textColor="@color/white"/>
+
+
+                        </LinearLayout>
+
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1px"
+                            android:background="@color/orange">
+
+                        </View>
+
                     </LinearLayout>
 
                 </LinearLayout>
 
-                <TextView
+                <View
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="@dimen/margin_s2"
-                    android:text="物美价廉，经济实惠，快来挑选" />
+                    android:layout_height="1px"
+                    android:background="@color/orange">
+
+                </View>
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="40dp">
+                   <TextView
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_gravity="center"
+                       android:layout_marginLeft="@dimen/margin_s2"
+                       android:text="物美价廉，经济实惠，快来挑选" />
+               </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/orange">
+
+                </View>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -183,7 +238,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="@dimen/margin_s2"
                         android:text="1837958088"
-                        android:textColor="@color/black"
+                        android:textColor="@color/dep_grey"
                         android:textSize="@dimen/size_s5" />
 
                     <TextView
@@ -199,9 +254,16 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="@dimen/margin_s2"
                         android:text="1254763408"
-                        android:textColor="@color/black"
+                        android:textColor="@color/dep_grey"
                         android:textSize="@dimen/size_s5" />
                 </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/orange">
+
+                </View>
 
                 <LinearLayout
                     android:layout_marginTop="@dimen/margin_s5"
@@ -209,18 +271,78 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
-                    <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="adiohahiiahhoiho"/>
-                    <TextView
-                        android:layout_width="match_parent"
+                   <LinearLayout
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:orientation="horizontal">
+                       <TextView
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:text="商品名称："/>
+                       <TextView
+                           android:layout_marginLeft="@dimen/margin_s3"
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:text="青春连衣裙"/>
+                   </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="adiohahiiahhoiho"/>
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="adiohahiiahhoiho"/>
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="商品介绍："/>
+                        <TextView
+                            android:layout_marginLeft="@dimen/margin_s3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="95成新，由于主人出国，委托我给她出售"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="商品认证："/>
+                       <RadioButton
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:layout_gravity="center"
+                           style="@style/radiobutton_style3"
+                           android:drawableLeft="@drawable/check_selector"
+                           android:text="诚信认证"
+                           android:textColor="@color/orange">
+
+                       </RadioButton>
+
+                        <RadioButton
+                            android:layout_marginLeft="@dimen/margin_s2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+
+                            style="@style/radiobutton_style3"
+                            android:drawableLeft="@drawable/check_selector"
+                            android:text="学生信息认证"
+                            android:textColor="@color/orange"
+                           />
+                        <RadioButton
+                            android:layout_marginLeft="@dimen/margin_s2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+
+                            style="@style/radiobutton_style3"
+                            android:drawableLeft="@drawable/check_selector"
+                            android:text="商品质量认证"
+                            android:textColor="@color/orange"
+                            />
+
+                    </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
 
@@ -239,8 +361,9 @@
             android:layout_height="match_parent"
             android:layout_weight="10">
             <ImageView
-                android:layout_width="wrap_content"
+                android:layout_width="30dip"
                 android:layout_height="wrap_content"
+                android:scaleType="fitCenter"
                 android:src="@drawable/ic_share"
                 android:layout_gravity="center"
                 android:layout_marginLeft="@dimen/margin_s2"/>
@@ -253,6 +376,7 @@
               android:layout_weight="1"
               android:background="#00BFFF">
               <Button
+                  android:id="@+id/contect"
                   android:layout_width="match_parent"
                   android:layout_height="match_parent"
                   android:background="#00BFFF"

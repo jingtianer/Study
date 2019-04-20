@@ -11,13 +11,16 @@
         android:roundIcon="@drawable/ic_login_logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".main.fragment.user.activity.setting.SettingActivity"></activity>
+        <activity android:name=".SpreadActivity"></activity>
+        <activity android:name=".main.fragment.user.activity.setting.SettingActivity" />
         <activity android:name=".main.fragment.message.activity.MessageDetailActivity" />
         <activity android:name=".main.fragment.home.activity.lookactivity.activity.GoodsIntroActivity" />
         <activity android:name=".main.fragment.user.activity.collection.MyCollectionActivity" />
         <activity android:name=".main.fragment.user.activity.order.activity.MyOrderActivity" />
         <activity android:name=".main.fragment.user.activity.shop.activity.MyShopActivity" />
-        <activity android:name=".main.fragment.home.activity.tosellactivity.ToSellActivity" />
+        <activity
+            android:name=".main.fragment.home.activity.tosellactivity.ToSellActivity"
+            android:windowSoftInputMode="adjustPan" />
         <activity android:name=".main.fragment.home.activity.lookactivity.activity.LookAroundActivity" />
         <activity android:name=".main.fragment.user.activity.detail.UserActivity" />
         <activity android:name=".account.login.activity.LoginActivity" />
