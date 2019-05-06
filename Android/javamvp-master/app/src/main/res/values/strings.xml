@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">java-mvp</string>
+    <string name="exit_app_with_twice_click">再次点击退出应用</string>
+</resources>
