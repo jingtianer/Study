@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary">#292929</color>
+    <color name="primary_dark">#292929</color>
+    <color name="primary_light">#BBDEFB</color>
+    <color name="accent">#03A9F4</color>
+    <color name="white">#FFFFFF</color>
+    <color name="whitesmoke">#f5f5f5</color>
+    <color name="red">#dc0434</color>
+    <color name="GeneralMotorsDarkGray">#292929</color>
+</resources>

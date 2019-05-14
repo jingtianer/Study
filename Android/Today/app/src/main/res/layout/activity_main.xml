@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/backgroud4">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ToDay"
+        android:layout_marginTop="80dp"
+        android:layout_marginLeft="20dp"
+        android:textColor="@color/white"
+        android:textSize="76sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="定制你的专属日历"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="60dp"
+        android:textColor="@color/white">
+    </TextView>
+
+    <LinearLayout
+        android:layout_width="240dp"
+        android:layout_height="48dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="60dp"
+        android:orientation="horizontal"
+        >
+        <ImageView
+            android:src="@drawable/ic_user"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            />
+        <EditText
+            android:id="@+id/edt_account"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="昵称"
+            android:layout_gravity="center"
+            android:textSize="12sp"
+           android:textColorHint="@color/whitesmoke"
+            android:layout_marginLeft="10dp"
+
+            />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="240dp"
+        android:layout_height="48dp"
+        android:layout_marginLeft="20dp"
+        android:orientation="horizontal"
+         >
+        <ImageView
+            android:src="@drawable/ic_key"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+         />
+        <EditText
+            android:id="@+id/edt_pwd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="密码"
+            android:layout_gravity="center"
+            android:textColorHint="@color/whitesmoke"
+            android:textSize="12sp"
+            android:layout_marginLeft="10dp"
+
+            />
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="16dp"
+        android:layout_width="240dp"
+        android:layout_height="48dp"
+        android:background="@drawable/button_round"
+        android:text="登陆"
+        android:textSize="20sp"
+        android:textColor="@color/white"/>
+    <LinearLayout
+        android:id="@+id/linearLayout_register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="新用户注册"
+            android:textColor="@color/whitesmoke"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:textSize="16sp"/>
+    </LinearLayout>
+</LinearLayout>
